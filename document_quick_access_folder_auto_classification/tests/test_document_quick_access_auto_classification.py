@@ -4,6 +4,11 @@
 import base64
 from unittest.mock import patch
 
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+
 from odoo import tools
 from odoo.tools import mute_logger
 
@@ -209,6 +214,54 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
         missing.invalidate_recordset()
         self.assertEqual(missing.edi_exchange_state, "input_processed")
         self.assertFalse(missing.model)
+
+    def test_no_ok_cv2_ok_multi(self):
+        if cv2 is None:
+            self.skipTest("OpenCV is not installed")
+        partners = self.env["res.partner"].create({"name": "Partner 1"})
+        partners |= self.env["res.partner"].create({"name": "Partner 2"})
+        partners |= self.env["res.partner"].create({"name": "Partner 3"})
+        partners |= self.env["res.partner"].create({"name": "Partner 4"})
+        self.test_no_ok_cv2_ok(partners)
+
+    @mute_logger("odoo.addons.queue_job.models.base")
+    def test_no_ok_cv2_ok(self, partners=False):
+        if cv2 is None:
+            self.skipTest("OpenCV is not installed")
+        if not partners:
+            partners = self.env["res.partner"].create({"name": "Partner"})
+        file = tools.file_open(
+            "addons/document_quick_access_folder_auto_classification/tests/test_file.pdf",
+            mode="rb",
+        ).read()
+        self.env["document.quick.access.rule"].create(
+            {
+                "model_id": self.model_id.id,
+                "name": "PARTNER",
+                "priority": 1,
+                "barcode_format": "standard",
+            }
+        )
+        code = [partner.get_quick_access_code() for partner in partners]
+        with patch.object(cv2.QRCodeDetector, "detectAndDecodeMulti") as ptch:
+            ptch.return_value = [True, code, [], []]
+            self.backend.create_record(
+                "document_quick_access",
+                {
+                    "exchange_filename": "test_file.pdf",
+                    "exchange_file": base64.b64encode(file),
+                    "edi_exchange_state": "input_received",
+                },
+            )
+            self.backend._cron_check_input_exchange_sync()
+            self.assertEqual(ptch.call_count, 1)
+        self.assertTrue(partners)
+        for partner in partners:
+            self.assertTrue(
+                self.env["ir.attachment"].search(
+                    [("res_model", "=", partner._name), ("res_id", "=", partner.id)]
+                )
+            )
 
     @mute_logger("odoo.addons.queue_job.models.base")
     def test_corrupted(self):
