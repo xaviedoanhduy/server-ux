@@ -6,134 +6,136 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-01-20 16:06+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_assign_form_view
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_form_view
 msgid "Assign"
-msgstr ""
+msgstr "Assegna"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:res.groups,name:document_quick_access_folder_auto_classification.group_missing_document
 msgid "Assigner"
-msgstr ""
+msgstr "Assegnatario"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_assign_form_view
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.actions.act_window,name:document_quick_access_folder_auto_classification.document_quick_access_missing_act_window
 msgid "Document Quick Access Missing"
-msgstr ""
+msgstr "Accesso rapido documento assente"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.actions.act_window,name:document_quick_access_folder_auto_classification.document_quick_access_missing_assign_act_window
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_assign_form_view
 msgid "Document Quick Access Missing Assign"
-msgstr ""
+msgstr "Assegna accesso rapido documento assente"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model,name:document_quick_access_folder_auto_classification.model_document_quick_access_rule
 msgid "Document Quick Access Rule"
-msgstr ""
+msgstr "Regola accesso rapido documento"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.ui.menu,name:document_quick_access_folder_auto_classification.document_quick_access_missing_menu
 msgid "Documents to process"
-msgstr ""
+msgstr "Documento da elaborare"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__exchange_record_id
 msgid "Exchange Record"
-msgstr ""
+msgstr "Record di scambio"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.module.category,name:document_quick_access_folder_auto_classification.ir_module_category_missing_document
 msgid "Missing Documents"
-msgstr ""
+msgstr "Documenti assenti"
 
 #. module: document_quick_access_folder_auto_classification
 #. odoo-python
 #: code:addons/document_quick_access_folder_auto_classification/components/document_quick_access_process.py:0
 #, python-format
 msgid "No file found"
-msgstr ""
+msgstr "Nessun file trovato"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model.fields,field_description:document_quick_access_folder_auto_classification.field_document_quick_access_missing_assign__object_id
 msgid "Object"
-msgstr ""
+msgstr "Oggetto"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_search_view
 msgid "Pending"
-msgstr ""
+msgstr "In sospeso"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_search_view
 msgid "Processed"
-msgstr ""
+msgstr "Elaborato"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_form_view
 msgid "Reject"
-msgstr ""
+msgstr "Rifiuta"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_search_view
 msgid "Rejected"
-msgstr ""
+msgstr "Rifiutato"
 
 #. module: document_quick_access_folder_auto_classification
 #: model_terms:ir.ui.view,arch_db:document_quick_access_folder_auto_classification.document_quick_access_missing_form_view
 msgid "Related record"
-msgstr ""
+msgstr "Record collegato"
 
 #. module: document_quick_access_folder_auto_classification
 #: model:ir.model,name:document_quick_access_folder_auto_classification.model_document_quick_access_missing_assign
 msgid "document.quick.access.missing.assign"
-msgstr ""
+msgstr "document.quick.access.missing.assign"
