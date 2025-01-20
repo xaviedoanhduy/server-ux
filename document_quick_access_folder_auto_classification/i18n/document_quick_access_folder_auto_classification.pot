@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -96,6 +96,7 @@ msgid "Missing Documents"
 msgstr ""
 
 #. module: document_quick_access_folder_auto_classification
+#. odoo-python
 #: code:addons/document_quick_access_folder_auto_classification/components/document_quick_access_process.py:0
 #, python-format
 msgid "No file found"
