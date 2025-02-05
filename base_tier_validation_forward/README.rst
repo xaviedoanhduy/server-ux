@@ -30,7 +30,7 @@ Base Tier Validation Forward
 
 This module add an advance option to base_tier_validation.
 
--  To allow "Forward" the tier to different user.
+- To allow "Forward" the tier to different user.
 
 **Sample use case:**
 
@@ -78,8 +78,9 @@ Authors
 Contributors
 ------------
 
--  Kitti U. <kittiu@ecosoft.co.th>
--  Andrea Stirpe <a.stirpe@onestein.nl>
+- Kitti U. <kittiu@ecosoft.co.th>
+- Andrea Stirpe <a.stirpe@onestein.nl>
+- Saran Lim. <saranl@ecosoft.co.th>
 
 Maintainers
 -----------
