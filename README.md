@@ -21,21 +21,21 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[base_cancel_confirm](base_cancel_confirm/) | 18.0.1.0.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Base Cancel Confirm
+[base_cancel_confirm](base_cancel_confirm/) | 18.0.1.0.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Base Cancel Confirm
 [base_export_manager](base_export_manager/) | 18.0.1.0.1 |  | Manage model export profiles
 [base_import_security_group](base_import_security_group/) | 18.0.1.0.0 |  | Group-based permissions for importing CSV files
-[base_menu_visibility_restriction](base_menu_visibility_restriction/) | 18.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Restrict (with groups) menu visibilty
+[base_menu_visibility_restriction](base_menu_visibility_restriction/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Restrict (with groups) menu visibilty
 [base_optional_quick_create](base_optional_quick_create/) | 18.0.1.0.0 |  | Avoid "quick create" on m2o fields, on a "by model" basis
 [base_revision](base_revision/) | 18.0.1.0.0 |  | Keep track of revised document
-[base_search_custom_field_filter](base_search_custom_field_filter/) | 18.0.1.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Add custom filters for fields via UI
+[base_search_custom_field_filter](base_search_custom_field_filter/) | 18.0.1.0.0 | <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Add custom filters for fields via UI
 [base_technical_features](base_technical_features/) | 18.0.1.0.2 |  | Access to technical features without activating debug mode
-[base_tier_validation](base_tier_validation/) | 18.0.1.1.3 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
+[base_tier_validation](base_tier_validation/) | 18.0.1.1.3 | <a href='https://github.com/LoisRForgeFlow'><img src='https://github.com/LoisRForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='LoisRForgeFlow'/></a> | Implement a validation process based on tiers.
 [base_tier_validation_formula](base_tier_validation_formula/) | 18.0.1.0.0 |  | Formulas for Base tier validation
-[base_tier_validation_forward](base_tier_validation_forward/) | 18.0.1.0.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Forward option for base tiers
-[date_range](date_range/) | 18.0.1.0.0 | [![lmignon](https://github.com/lmignon.png?size=30px)](https://github.com/lmignon) | Manage all kind of date range
-[date_range_account](date_range_account/) | 18.0.1.0.0 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Add Date Range menu entry in Invoicing app
-[developer_menu](developer_menu/) | 18.0.1.0.0 | [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Menu Shortcut for developer usage
-[mail_message_destiny_link_template](mail_message_destiny_link_template/) | 18.0.1.0.0 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) [![rafaelbn](https://github.com/rafaelbn.png?size=30px)](https://github.com/rafaelbn) | Mail template to show destiny records in chatter.
+[base_tier_validation_forward](base_tier_validation_forward/) | 18.0.1.0.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Forward option for base tiers
+[date_range](date_range/) | 18.0.1.0.0 | <a href='https://github.com/lmignon'><img src='https://github.com/lmignon.png' width='32' height='32' style='border-radius:50%;' alt='lmignon'/></a> | Manage all kind of date range
+[date_range_account](date_range_account/) | 18.0.1.0.0 | <a href='https://github.com/alexis-via'><img src='https://github.com/alexis-via.png' width='32' height='32' style='border-radius:50%;' alt='alexis-via'/></a> | Add Date Range menu entry in Invoicing app
+[developer_menu](developer_menu/) | 18.0.1.0.0 | <a href='https://github.com/bealdav'><img src='https://github.com/bealdav.png' width='32' height='32' style='border-radius:50%;' alt='bealdav'/></a> | Menu Shortcut for developer usage
+[mail_message_destiny_link_template](mail_message_destiny_link_template/) | 18.0.1.0.0 | <a href='https://github.com/Shide'><img src='https://github.com/Shide.png' width='32' height='32' style='border-radius:50%;' alt='Shide'/></a> <a href='https://github.com/rafaelbn'><img src='https://github.com/rafaelbn.png' width='32' height='32' style='border-radius:50%;' alt='rafaelbn'/></a> | Mail template to show destiny records in chatter.
 [sequence_check_digit](sequence_check_digit/) | 18.0.1.0.1 |  | Adds a check digit on sequences
 [server_action_mass_edit](server_action_mass_edit/) | 18.0.1.0.0 |  | Mass Editing
 
