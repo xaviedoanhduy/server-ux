@@ -10,6 +10,7 @@
         <field name="backend_type_id" ref="backend_type" />
         <field name="direction">input</field>
         <field name="exchange_filename_pattern" />
+        <field name="process_model_id" ref="model_document_quick_access_handler" />
     </record>
     <record id="edi_backend" model="edi.backend">
         <field name="name">Document quick access auto classification</field>

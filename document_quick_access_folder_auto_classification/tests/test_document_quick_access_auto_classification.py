@@ -7,7 +7,9 @@ from unittest.mock import patch
 from odoo import tools
 from odoo.tools import mute_logger
 
-from odoo.addons.component.tests.common import TransactionComponentRegistryCase
+from odoo.addons.edi_component_oca.tests.common import (
+    EDIBackendCommonComponentRegistryTestCase,
+)
 
 
 class Encoded:
@@ -17,7 +19,7 @@ class Encoded:
         self.data = data
 
 
-class TestDocumentQuickAccessClassification(TransactionComponentRegistryCase):
+class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -77,7 +79,7 @@ class TestDocumentQuickAccessClassification(TransactionComponentRegistryCase):
         ]
         with patch(
             "odoo.addons.document_quick_access_folder_auto_classification."
-            "components.document_quick_access_process.decode"
+            "models.document_quick_access_handler.decode"
         ) as ptch:
             ptch.return_value = code
             self.backend.create_record(
@@ -164,7 +166,7 @@ class TestDocumentQuickAccessClassification(TransactionComponentRegistryCase):
         with self.assertRaises(TypeError):
             with patch(
                 "odoo.addons.document_quick_access_folder_auto_classification."
-                "components.document_quick_access_process.decode"
+                "models.document_quick_access_handler.decode"
             ) as ptch:
                 ptch.return_value = 1
                 self.backend.create_record(

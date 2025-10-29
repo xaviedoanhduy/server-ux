@@ -1,16 +1,10 @@
-# Copyright 2021 Creu Blanca
-# @author: Enric Tobella
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
 import base64
 import logging
 import traceback
 from io import StringIO
 
-from odoo import _
+from odoo import _, models
 from odoo.exceptions import UserError
-
-from odoo.addons.component.core import Component
 
 _logger = logging.getLogger(__name__)
 
@@ -29,30 +23,32 @@ except (OSError, ImportError) as err:
     _logger.warning(err)
 
 
-class EdiDocumentQuickAccessProcess(Component):
-    _name = "edi.input.process.document.quick.access"
-    _usage = "input.process"
-    _backend_type = "document_quick_access"
-    _exchange_type = "document_quick_access"
-    _inherit = "edi.component.input.mixin"
+class EdiDocumentQuickAccessHandler(models.AbstractModel):
+    _name = "document.quick.access.handler"
+    _inherit = [
+        "edi.oca.handler.process",
+    ]
+    _description = "Component Handler for Document Quick Access"
 
-    def process(self):
-        data = self.exchange_record.exchange_file
+    def process(self, exchange_record):
+        data = exchange_record.exchange_file
         records = self._search_document_pdf(data)
         for record in records:
-            self.env["ir.attachment"].create(self._get_attachment_vals(record))
+            self.env["ir.attachment"].create(
+                self._get_attachment_vals(record, exchange_record)
+            )
         if records:
             record = records[0]
-            self.exchange_record.write({"res_id": record.id, "model": record._name})
+            exchange_record.write({"res_id": record.id, "model": record._name})
         elif self.env.context.get("document_quick_access_reject_file"):
             return
         else:
             raise UserError(_("No file found"))
 
-    def _get_attachment_vals(self, record):
+    def _get_attachment_vals(self, record, exchange_record):
         return {
-            "name": self.exchange_record.exchange_filename,
-            "datas": self.exchange_record.exchange_file,
+            "name": exchange_record.exchange_filename,
+            "datas": exchange_record.exchange_file,
             "res_id": record.id,
             "res_model": record._name,
         }
