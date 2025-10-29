@@ -16,7 +16,7 @@ _logger = logging.getLogger(__name__)
 
 try:
     from pyzbar.pyzbar import ZBarSymbol, decode
-except (ImportError, IOError) as err:
+except (OSError, ImportError) as err:
     _logger.warning(err)
 try:
     import pdf2image
@@ -25,7 +25,7 @@ try:
         PDFPageCountError,
         PDFSyntaxError,
     )
-except (ImportError, IOError) as err:
+except (OSError, ImportError) as err:
     _logger.warning(err)
 
 

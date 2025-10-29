@@ -144,7 +144,7 @@ class TestDocumentQuickAccessClassification(TransactionComponentRegistryCase):
         )
         wizard = self.env["document.quick.access.missing.assign"].create(
             {
-                "object_id": "{},{}".format(partner._name, partner.id),
+                "object_id": f"{partner._name},{partner.id}",
                 "exchange_record_id": missing.id,
             }
         )

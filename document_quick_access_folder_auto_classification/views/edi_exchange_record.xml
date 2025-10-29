@@ -2,7 +2,6 @@
 <!-- Copyright 2019 Creu Blanca
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="document_quick_access_missing_form_view">
         <field
             name="name"
