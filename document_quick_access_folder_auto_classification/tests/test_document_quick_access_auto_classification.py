@@ -60,7 +60,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
         partners |= self.env["res.partner"].create({"name": "Partner 4"})
         self.test_ok_pdf(partners)
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_ok_pdf(self, partners=False):
         """Assign automatically PDFs to their assigned place"""
         if not partners:
@@ -105,7 +105,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
                 )
             )
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_no_ok_assign(self):
         """Assign failed files"""
         file = tools.file_open(
@@ -161,7 +161,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
         self.assertEqual(partner._name, action["res_model"])
         self.assertEqual(partner.id, action["res_id"])
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_failure(self):
         """We will check that if a major exception raises all is handled"""
         file = tools.file_open(
@@ -184,7 +184,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
                 )
                 self.backend._cron_check_input_exchange_sync()
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_no_ok_reject(self):
         """We will check that we can manage and reject failed files"""
         file = tools.file_open(
@@ -224,7 +224,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
         partners |= self.env["res.partner"].create({"name": "Partner 4"})
         self.test_no_ok_cv2_ok(partners)
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_no_ok_cv2_ok(self, partners=False):
         if cv2 is None:
             self.skipTest("OpenCV is not installed")
@@ -263,7 +263,7 @@ class TestDocumentQuickAccessClassification(EDIBackendCommonComponentRegistryTes
                 )
             )
 
-    @mute_logger("odoo.addons.queue_job.models.base")
+    @mute_logger("odoo.addons.queue_job.utils")
     def test_corrupted(self):
         """We will check that corrupted files are stored also"""
         file = tools.file_open(
