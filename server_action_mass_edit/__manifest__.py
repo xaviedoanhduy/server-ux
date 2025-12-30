@@ -14,6 +14,7 @@
     "summary": "Mass Editing",
     "depends": [
         "base",
+        "web",
     ],
     "data": [
         "security/ir.model.access.csv",
